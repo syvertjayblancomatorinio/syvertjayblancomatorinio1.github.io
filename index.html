@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/Images/logos.png">
+
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet"
+        href="https://iconscout.com/unicons/explore/line?redirect=%2Funicons%2Fexplore%2Fline%3Fcolor%3D%2525236563FF%26name%3Dairplay">
+    <title>Home-Dropbox</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/download (1).png" alt="Dropbox">
+            </div>
+
+            <span class="logo_name">Dropbox</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#" id="home-link">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name" id="home">Home</span>
+                    </a></li>
+                <li><a href="files.html">
+                        <i class="uil uil-file"></i>
+                        <span class="link-name">All files</span>
+                    </a></li>
+                <li>
+
+
+                <li><a href="#activity">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Recents</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-favorite"></i>
+                        <span class="link-name">Starred</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-image-plus"></i>
+                        <span class="link-name">Photos</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-edit-alt"></i>
+                        <span class="link-name">Signatures</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-share"></i>
+                        <span class="link-name">Shared</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-file-search-alt"></i>
+                        <span class="link-name">File requests</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-file-minus-alt"></i>
+                        <span class="link-name">Deleted files</span>
+                    </a></li>
+            </ul>
+
+            <div class="dropbox-basic">
+                <li>Dropbox Basic</li> <br>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    <p>500 mb of 2 Gb used</p>
+                </div>
+
+            </div>
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <div class="upload-button">
+                <i class="uil uil-question-circle" style="font-size: 25px;"></i>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" style="font-size: 10px;">See what's new</a>
+                </div>
+            </div>
+
+            <div class="upload-button">
+                <i class="uil uil-bell" style="font-size: 30px;"></i>
+                <div class="dropdown-menu">
+                    <a href="#" style="font-size: 10px;">Notifications</a>
+                </div>
+            </div>
+            <div class="upload-button">
+                <img src="images/profile.png" alt="Profile">
+                <div class="dropdown-menu">
+                    <a href="#" style="font-size: 10px;">Account</a>
+                </div>
+            </div>
+            <button class="topButton">Click to Upgrade</button>
+        </div>
+
+
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dropbox</span>
+
+                </div>
+                <div>
+
+                    <div class="upload-wrapper">
+                        <div class="upload-button">
+                            <label for="file-upload"></label>
+                            <form id="file-upload-form">
+                                <input type="file" id="file-upload" webkitdirectory directory multiple>
+                            </form>
+                            <button class="button">
+                                <i class="uil uil-upload"></i> Upload
+                                <i class="fas fa-caret-down"></i>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item"
+                                    onclick="document.getElementById('file-upload').webkitdirectory = false; document.getElementById('file-upload').click();">
+                                    <i class="uil uil-file-upload-alt"></i>File
+                                </a>
+                                <a href="#" class="dropdown-item"
+                                    onclick="document.getElementById('file-upload').webkitdirectory = true; document.getElementById('file-upload').click();">
+                                    <i class="uil uil-folder-upload"></i>Folder
+                                </a>
+
+                            </div>
+
+                            <input type="file" id="file-upload" style="display:none">
+                            <input type="file" id="folder-upload" style="display:none" webkitdirectory>
+
+                        </div>
+
+                        <div class="upload-button">
+                            <label for="create"></label>
+                            <button class="button">
+                                <i class="fas fa-upload"></i> Create
+                                <i class="fas fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <input type="file" id="create-folder" style="display: none;">
+                                <a href="#" class="dropdown-item" onclick="showCreateFolder()"><i
+                                        class="uil uil-folder-upload"></i>Folder</a>
+                                <input type="file" id="folder-upload" style="display: none;">
+                                <a href="#" class="dropdown-item" onclick="showCreateSharedFolder()"><i
+                                        class="uil uil-folder-network"></i>Shared folder</a>
+                                <a href="#" class="dropdown-item" onclick="createAutomatedFolder()"><i
+                                        class="uil uil-folder-info">Folder "Automated"</i></a>
+                                <a href="#" class="dropdown-item" onclick="startScreenRecording()"><i
+                                        class="uil uil-video-question">Screen</i> recording</a>
+                            </div>
+                        </div>
+
+                        <div class="upload-button">
+                            <button class="ellipsis-button"><i class="uil uil-ellipsis-h"></i></button>
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="uil uil-dropbox">Dropbox</i></a>
+                                <a href="#"><i class="uil uil-file-times">Show Deleted Files</i></a>
+                                <a href="#"><i class="uil uil-file-plus">Request File</i></a>
+                                <a href="#"><i class="uil uil-file-contract">Rewind This Folder</i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br>
+
+
+
+                    <div class="boxes">
+                        <div class="box box1">
+                            <i class="uil uil-cloud"></i>
+                            <span class="text">Used Storage</span>
+                            <span class="number">25%</span>
+                        </div>
+
+                        <div class="box box2">
+                            <i class="uil uil-images"></i>
+                            <span class="text">Photos</span>
+                            <span class="number">50 mb</span>
+                        </div>
+                        <div class="box box3">
+                            <i class="uil uil-file-minus"></i>
+                            <span class="text">Trash</span>
+                            <span class="number">1 Gb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <br> <br>
+                <!-- <center>
+                    <div id="drop-area">
+                        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                        <p>Drag and drop files here or click to select files</p>
+                        <input type="file" id="file-input" multiple>
+                    </div>
+                    <div class="files-container"></div>
+
+
+                </center>
+                <br>
+                <hr>
+
+                <div class="files-container">
+                    <div class="file-wrapper">
+                        <div class="file-preview">
+                            <img src="" alt="file preview" />
+                            <div class="file-info">
+                                <h4 class="file-name">File Name</h4>
+                                <p class="file-size">1.2 MB</p>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="btn-download">Download</button>
+                            <button class="btn-delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                <center>
+                    <div id="drop-area" class="upload-area">
+                        <div class="drag-drop-zone">
+                            <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                            <p>Drag and drop files here or click to select files</p>
+                            <input type="file" id="file-input" multiple>
+                        </div>
+                        <div class="upload-progress-bar">
+                            <div class="progress-bar"></div>
+                            <div class="progress-bar-text">0%</div>
+                        </div>
+                    </div>
+                </center>
+                <div class="panel-body">
+                    <div class="t1">
+                        <div class="t2">
+                            <div class="files-container">
+                                <div class="file-wrapper">
+                                    <div class="file-actions">
+                                        <div class="upload-button">
+                                            <button class="ellipsis-button"><i class="uil uil-ellipsis-h"></i></button>
+                                            <div class="dropdown-menu">
+                                                <button class="btn-download">Download</button>
+                                                <button class="btn-delete">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="file-preview">
+                                        <img src="/Images/download.jpg" alt="file preview" style="height: 160px;" />
+
+                                        <div class="file-info">
+                                            <h4 class="file-name">My Photos</h4>
+                                            <p class="file-size">1.2 MB</p>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="file-items-container">
+
+                            <template id="file-item-template">
+                                <div class="file-wrapper" id="file-container1">
+                                    <div class="file-preview">
+                                        <div class="file-actions">
+                                            <div class="upload-button">
+                                                <button class="ellipsis-button"><i
+                                                        class="uil uil-ellipsis-h"></i></button>
+                                                <div class="dropdown-menu">
+                                                     <a class="btn-download"  download>Download</a>
+                                                    <button class="btn-delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <img src="" alt="file preview" />
+                                        <div class="file-info">
+                                            <h4 class="file-name"></h4>
+                                            <p class="file-size"></p>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                            </template>
+                        </div>
+
+                    </div>
+
+                    <div class="activity" id="activity">
+                        <div class="title">
+                            <i class="uil uil-clock-three"></i>
+                            <span class="text">Recent Activity</span>
+                        </div>
+
+                        <div class="activity-data">
+                            <div class="data names">
+                                <span class="data-title">Folder Name</span>
+                                <span class="data-list">index.html</span>
+                                <span class="data-list">Final Project</span>
+                            </div>
+                            <div class="data joined">
+                                <span class="data-title">Uploaded</span>
+                                <span class="data-list">2022-05-05</span>
+                                <span class="data-list">2023-05-05</span>
+                            </div>
+                            <div class="data type">
+                                <span class="data-title">Type</span>
+                                <span class="data-list">file</span>
+                                <span class="data-list">folder</span>
+                            </div>
+                            <div class="data status">
+                                <span class="data-title">Size</span>
+                                <span class="data-list">10 mb</span>
+                                <span class="data-list">300 mb</span>
+                            </div>
+                        </div>
+    </section>
+
+    <!-- <script>
+
+
+
+        const fileInput = document.getElementById("file-input");
+        const filesContainer = document.querySelector(".files-container");
+        const fileItemTemplate = document.getElementById("file-item-template");
+        const activity = document.querySelector(".activity");
+        const deleteButton = document.getElementById("delete-button");
+
+        // deleteButton.addEventListener("click", function () {
+        //     var fileItemWrapper = deleteButton.closest(".file-wrapper");
+        //     fileItemWrapper.style.display = "none";
+        // });
+
+
+
+        fileInput.addEventListener("change", () => {
+            const files = fileInput.files;
+            for (const file of files) {
+                const fileItem = fileItemTemplate.content.cloneNode(true);
+                const filePreview = fileItem.querySelector(".file-preview");
+                const filePreviewImg = filePreview.querySelector("img");
+                const filePreviewName = filePreview.querySelector(".file-name");
+                const filePreviewSize = filePreview.querySelector(".file-size");
+                const downloadBtn = fileItem.querySelector(".btn-download");
+                const deleteBtn = fileItem.querySelector(".btn-delete");
+
+
+                filePreviewImg.src = URL.createObjectURL(file);
+
+                // Set the file name and size
+                filePreviewName.textContent = file.name;
+                filePreviewSize.textContent = `${(file.size / (1024 * 1024)).toFixed(2)} MB`;
+
+
+                // Set the download link
+                downloadBtn.setAttribute("href", URL.createObjectURL(file));
+                downloadBtn.setAttribute("download", file.name);
+
+                // Add event listeners to the delete button
+                deleteBtn.addEventListener("click", function () {
+                    var fileItem = deleteBtn.closest(".file-wrapper")
+                    fileItem.style.display = "none";
+                    fileItem.remove();
+                });
+
+                // Append the file item to the files container
+                filesContainer.appendChild(fileItem);
+
+            }
+            function addFileToPage(file) {
+                // Create a new file item from the template
+                const fileItem = fileItemTemplate.content.cloneNode(true);
+                const fileWrapper = fileItem.querySelector(".file-wrapper");
+                const fileName = fileItem.querySelector(".file-name");
+                const fileSize = fileItem.querySelector(".file-size");
+                const filePreview = fileItem.querySelector(".file-preview img");
+                const downloadButton = fileItem.querySelector(".btn-download");
+            }
+            fileName.textContent = file.name;
+            fileSize.textContent = formatFileSize(file.size);
+            if (file.type.startsWith("image/")) {
+                filePreview.src = URL.createObjectURL(file);
+                filePreview.alt = file.name;
+            }
+            downloadButton.href = URL.createObjectURL(file);
+            downloadButton.download = file.name;
+            filesContainer.appendChild(fileItem);
+
+            function formatFileSize(bytes) {
+                if (bytes < 1024) return bytes + " bytes";
+                else if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
+                else return (bytes / (1024 * 1024)).toFixed(1) + " MB";
+            }
+
+
+
+        });
+
+
+        const body = document.querySelector("body"),
+            modeToggle = body.querySelector(".mode-toggle");
+        sidebar = body.querySelector("nav");
+        sidebarToggle = body.querySelector(".sidebar-toggle");
+
+        let getMode = localStorage.getItem("mode");
+        if (getMode && getMode === "dark") {
+            body.classList.toggle("dark");
+        }
+
+        let getStatus = localStorage.getItem("status");
+        if (getStatus && getStatus === "close") {
+            sidebar.classList.toggle("close");
+        }
+
+        modeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark");
+            if (body.classList.contains("dark")) {
+                localStorage.setItem("mode", "dark");
+            } else {
+                localStorage.setItem("mode", "light");
+            }
+        });
+        function uploadFile(isFolder) {
+            var input = document.getElementById("file-upload");
+            if (input.files.length > 0) {
+                var file = input.files[0];
+                var formData = new FormData();
+                formData.append("file", file);
+                formData.append("isFolder", isFolder);
+
+                fetch("upload.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(result => {
+                        console.log(result);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            } else {
+                console.log("No file selected");
+            }
+        }
+
+        // function to show/hide the "Create folder" input field
+        function showCreateFolder() {
+            var createFolderInput = document.getElementById("create-folder");
+            createFolderInput.style.display = createFolderInput.style.display === "none" ? "block" : "none";
+        }
+
+        // function to show/hide the "Create shared folder" input field
+        function showCreateSharedFolder() {
+            var folderUploadInput = document.getElementById("folder-upload");
+            folderUploadInput.style.display = folderUploadInput.style.display === "none" ? "block" : "none";
+        }
+
+        // function to create an automated folder
+        function createAutomatedFolder() {
+            // code to create a new folder with a default name, e.g. "Automated Folder"
+        }
+
+        // function to start screen recording
+        function startScreenRecording() {
+            // code to start screen recording
+        }
+
+
+    </script> -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
